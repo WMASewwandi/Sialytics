@@ -162,7 +162,7 @@ export default function Home() {
           <List>
             {navItems.map((item) => (
               <ListItem key={item.id} component="button" sx={{border: 'none',background: 'transparent'}} onClick={() => handleScrollTo(item.id)}>
-                <ListItemText primary={item.label} />
+                <ListItemText sx={{color: '#114dc7'}} primary={item.label} />
               </ListItem>
             ))}
             <ListItem>
