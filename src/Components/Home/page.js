@@ -68,7 +68,7 @@ export default function HomePage() {
             sx={{
               color: "white",
               fontWeight: "bold",
-              fontSize: { xs: "1.6rem", sm: "2rem", md: "3rem" },
+              fontSize: { xs: "2rem", sm: "2rem", md: "3rem" },
             }}
           >
             Turning Data into a Growth Engine

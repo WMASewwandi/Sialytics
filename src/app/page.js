@@ -20,6 +20,7 @@ import ClientsPage from "@/Components/Clients/page";
 import ServicesPage from "@/Components/Services/page";
 import CaseStudyPage from "@/Components/CaseStudy/page";
 import WhyUsPage from "@/Components/WhyUs/page";
+import Footer from "@/Components/Footer/page";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -202,6 +203,9 @@ export default function Home() {
       </Box>
       <Box id="whysialytics">
         <WhyUsPage/>
+      </Box>
+      <Box>
+        <Footer/>
       </Box>
     </>
   );
