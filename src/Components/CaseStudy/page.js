@@ -25,7 +25,7 @@ export default function CaseStudyPage() {
           mt: { xs: 10, md: 5 },
           px: { xs: 3, md: 3 },
           textAlign: { xs: "center", md: "left" },
-          background: '#fff'
+          // background: '#fff'
         }}
       >
         <Box>
