@@ -94,60 +94,94 @@ export default function CaseStudyPage() {
             </Box>
 
             <Box
-                sx={{
-                    flex: { xs: "1", md: "4" },
-                    backgroundColor: "#001f54",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "flex-start",
-                    pt: { xs: 5, md: 20 },
-                    px: { xs: 3, md: 10 },
-                    position: "relative",
-                }}
-            >
-                <Box display="flex" justifyContent="start" width="100%">
-                    <Box width="100%">
-                        <Typography variant="h5" sx={{ mt: 2, color: "#3f6fdd", fontWeight: "600" }}>
-                            The Results:
-                        </Typography>
-                        <Box display="flex" justifyContent="center" width="100%">
-                            <Box width="100%">
-                                {CardData.map((card, index) => (
-                                    <Card
-                                        key={index}
-                                        sx={{
-                                            backgroundColor: "#182a4f",
-                                            color: "#fff",
-                                            width: "100%",
-                                            borderRadius: 3,
-                                            boxShadow: "0 8px 16px rgba(0,0,0,0.1)",
-                                            display: "flex",
-                                            mt: 2,
-                                            textAlign: "center",
-                                            px: 3,
-                                        }}
-                                    >
-                                        <Box display="flex" width="100%">
-                                            <Box sx={{ width: "40%", display: "flex", justifyContent: "start", alignItems: "center", p: 2 }}>
-                                                <img src={card.image} width={70} height={70} />
-                                            </Box>
+  sx={{
+    flex: { xs: "1", md: "4" },
+    backgroundColor: "#001f54",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    pt: { xs: 5, md: 20 },
+    px: { xs: 3, md: 10 },
+    position: "relative",
+  }}
+>
+  <Box display="flex" justifyContent="start" width="100%">
+    <Box width="100%">
+      <Typography
+        variant="h5"
+        sx={{ mt: 2, color: "#3f6fdd", fontWeight: "600" }}
+      >
+        The Results:
+      </Typography>
 
-                                            <Box sx={{ width: "60%", p: 2 }}>
-                                                <Typography variant="h6" sx={{ fontWeight: "600" }}>
-                                                    {card.name}
-                                                </Typography>
-                                                <Typography sx={{ my: 2, fontWeight: 200, color: '#9d9b98', fontSize: '1rem', width: '90%' }}>
-                                                    {card.description}
-                                                </Typography>
-                                            </Box>
-                                        </Box>
-                                    </Card>
-                                ))}
-                            </Box>
-                        </Box>
-                    </Box>
+      <Box display="flex" justifyContent="center" width="100%">
+        <Box width="100%" mb={2}>
+          {CardData.map((card, index) => (
+            <Card
+              key={index}
+              sx={{
+                backgroundColor: "#182a4f",
+                color: "#fff",
+                width: "100%",
+                borderRadius: 3,
+                boxShadow: "0 8px 16px rgba(0,0,0,0.1)",
+                display: "flex",
+                mt: 2,
+                px: 3,
+              }}
+            >
+              <Box
+                display="flex"
+                flexDirection={{ xs: "column", md: "row" }}
+                alignItems="center"
+                width="100%"
+              >
+                {/* Left side (Image) */}
+                <Box
+                  sx={{
+                    width: { xs: "100%", md: "40%" },
+                    display: "flex",
+                    justifyContent: { xs: "center", md: "flex-start" },
+                    alignItems: "center",
+                    p: 2,
+                  }}
+                >
+                  <img src={card.image} width={70} height={70} />
                 </Box>
-            </Box>
+
+                {/* Right side (Text) */}
+                <Box
+                  sx={{
+                    width: { xs: "100%", md: "60%" },
+                    p: 2,
+                    textAlign: { xs: "center", md: "left" },
+                  }}
+                >
+                  <Typography variant="h6" sx={{ fontWeight: "600" }}>
+                    {card.name}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      my: 2,
+                      fontWeight: 200,
+                      color: "#9d9b98",
+                      fontSize: "1rem",
+                      maxWidth: "90%",
+                      mx: { xs: "auto", md: 0 },
+                    }}
+                  >
+                    {card.description}
+                  </Typography>
+                </Box>
+              </Box>
+            </Card>
+          ))}
+        </Box>
+      </Box>
+    </Box>
+  </Box>
+</Box>
+
 
         </Box>
     );

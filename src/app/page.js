@@ -19,6 +19,7 @@ import WhyCallMePage from "@/Components/WhyCallMe/page";
 import ClientsPage from "@/Components/Clients/page";
 import ServicesPage from "@/Components/Services/page";
 import CaseStudyPage from "@/Components/CaseStudy/page";
+import WhyUsPage from "@/Components/WhyUs/page";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -199,8 +200,8 @@ export default function Home() {
       <Box id="casestudy">
         <CaseStudyPage/>
       </Box>
-      <Box id="whysialytics" sx={{ height: "100vh", bgcolor: "#f1f8e9", p: 5 }}>
-        <Typography variant="h4">Why Sialytics Section</Typography>
+      <Box id="whysialytics">
+        <WhyUsPage/>
       </Box>
     </>
   );
