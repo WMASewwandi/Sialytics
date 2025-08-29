@@ -1,0 +1,144 @@
+"use client";
+import React from "react";
+import { Box, Card, CardMedia, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material";
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+
+const listItems = [
+    "Former CDAO at MoneyGram International – led global data transformation",
+    "Built high-performing analytics teams and modernized infrastructure",
+    "Delivered measurable business impact — from digital adoption to valuation growth",
+    "Proven record in financial services, healthcare, defense, and technology"
+]
+
+export default function AboutPage() {
+    return (
+        <Box
+            sx={{
+                display: "flex",
+                width: "100vw",
+                minHeight: "100vh",
+                flexDirection: { xs: "column", md: "row" },
+                position: "relative",
+            }}
+        >
+            <Box
+                sx={{
+                    flex: { xs: "1", md: "6.5" },
+                    display: "flex",
+                    alignItems: { xs: "flex-start", md: "center" },
+                    justifyContent: "center",
+                    marginLeft: { xs: 0, md: "5rem" },
+                    mt: { xs: 10, md: 0 },
+                    px: { xs: 3, md: 0 },
+                    textAlign: { xs: "center", md: "left" }
+                }}
+            >
+                <Box>
+                    <Typography variant="h4" sx={{ fontWeight: 600, fontSize: { xs: "1.5rem", md: "2rem" } }}>
+                        25+ Years of Data <br />Leadership Experience
+                    </Typography>
+                    <List sx={{ mt: 2, px: 0 }}>
+                        {listItems.map((item, index) => (
+                            <ListItem key={index} disablePadding sx={{ width: { xs: "100%", md: "75%" }, mx: { xs: "auto", md: 0 } }}>
+                                <ListItemButton>
+                                    <ListItemIcon>
+                                        <CheckCircleOutlineIcon sx={{ color: '#538ffd' }} />
+                                    </ListItemIcon>
+                                    <ListItemText primary={item} primaryTypographyProps={{ sx: { fontSize: { xs: "0.9rem", md: "1rem" } } }} />
+                                </ListItemButton>
+                            </ListItem>
+                        ))}
+                    </List>
+                </Box>
+            </Box>
+
+            <Box
+                sx={{
+                    flex: { xs: "1", md: "3.5" },
+                    backgroundColor: "#001f54",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    pt: { xs: 5, md: 20 },
+                    position: "relative",
+                }}
+            >
+                <Box
+                    sx={{
+                        position: { xs: "static", md: "absolute" },
+                        top: { md: "80%" },
+                        left: { md: "10%" },
+                        fontWeight: "bold",
+                        textAlign: { xs: "center", md: "left" },
+                        mb: { xs: 3, md: 0 }
+                    }}
+                >
+                    <ListItemText
+                        primaryTypographyProps={{
+                            sx: {
+                                fontSize: { xs: "1rem", md: "1.5rem" },
+                                color: "#538ffd",
+                                fontWeight: "bold",
+                            },
+                        }}
+                        secondaryTypographyProps={{
+                            sx: {
+                                fontSize: { xs: "0.9rem", md: "1.3rem" },
+                                color: "#538ffd",
+                            },
+                        }}
+                        primary="Sia Zahedi"
+                        secondary="Data Analytics Consultant"
+                    />
+                </Box>
+
+                <Card
+                    sx={{
+                        width: { xs: "180px", sm: "220px" },
+                        height: { xs: "220px", sm: "270px" },
+                        borderRadius: "20px",
+                        my: { xs: 3, md: 0 },
+                        display: { xs: "block", md: "none" }
+                    }}
+                >
+                    <CardMedia
+                        component="img"
+                        image="https://framerusercontent.com/images/mMuY3tASVbgGIY5uslfNo38P4.png?scale-down-to=512&width=950&height=950"
+                        alt="Example Image"
+                        sx={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                        }}
+                    />
+                </Card>
+            </Box>
+
+            <Card
+                sx={{
+                    position: "absolute",
+                    top: { md: "50%" },
+                    left: { md: "65%" },
+                    transform: { md: "translate(-50%, -50%)" },
+                    width: { md: "300px" },
+                    height: { md: "350px" },
+                    borderRadius: "20px",
+                    zIndex: 2,
+                    display: { xs: "none", md: "block" }
+                }}
+            >
+                <CardMedia
+                    component="img"
+                    image="https://framerusercontent.com/images/mMuY3tASVbgGIY5uslfNo38P4.png?scale-down-to=512&width=950&height=950"
+                    alt="Example Image"
+                    sx={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                    }}
+                />
+            </Card>
+        </Box>
+    );
+}
