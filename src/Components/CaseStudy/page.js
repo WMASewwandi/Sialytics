@@ -84,12 +84,12 @@ export default function CaseStudyPage() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "flex-start",
-          pt: { xs: 5, md: 20 },
+          pt: { xs: 5, md: 10 },
           px: { xs: 3, md: 10 },
           position: "relative",
         }}
       >
-        <Typography variant="h5" sx={{ mt: 2, color: "#3f6fdd", fontWeight: 600 }}>The Results:</Typography>
+        <Typography variant="h5" sx={{ color: "#3f6fdd", fontWeight: 600 }}>The Results:</Typography>
         <Box width="100%" mt={2}>
           {CardData.map((card, index) => (
             <Card
