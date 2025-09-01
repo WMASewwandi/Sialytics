@@ -186,7 +186,7 @@ export default function Home() {
       <Box id="home" sx={{ height: "100vh" }}>
         <HomePage />
       </Box>
-      <Box id="about" sx={{ height: "100vh" }}>
+      <Box id="about">
         <AboutPage />
       </Box>
       <Box id="whycallme">

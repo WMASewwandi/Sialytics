@@ -16,7 +16,7 @@ export default function AboutPage() {
             sx={{
                 display: "flex",
                 width: "100vw",
-                minHeight: "100vh",
+                minHeight: {lg: "100vh",xl: "65vh"},
                 flexDirection: { xs: "column", md: "row" },
                 position: "relative",
             }}
