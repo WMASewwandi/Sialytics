@@ -5,7 +5,6 @@ import {
   Toolbar,
   Button,
   Box,
-  Typography,
   IconButton,
   Drawer,
   List,
@@ -59,7 +58,7 @@ export default function Home() {
   const handleScrollTo = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      const top = element.getBoundingClientRect().top + window.scrollY - 80; 
+      const top = element.getBoundingClientRect().top + window.scrollY - 80;
       window.scrollTo({ top, behavior: "smooth" });
       setMobileOpen(false);
     }
@@ -103,8 +102,9 @@ export default function Home() {
                   textTransform: "none",
                   fontSize: "16px",
                   fontWeight: 500,
-                  background: 'transparent',
+                  background: "transparent",
                   position: "relative",
+                  transition: "transform 0.3s ease",
                   "&::after": {
                     content: '""',
                     position: "absolute",
@@ -115,8 +115,11 @@ export default function Home() {
                     bgcolor: scrolled ? "#114dc7" : "white",
                     transition: "width 0.3s ease",
                   },
+                  "&:hover": {
+                    transform: "rotate(15deg)",
+                  },
                   "&:hover::after": {
-                    width: "100%",
+                    // width: "100%",
                   },
                 }}
               >
@@ -161,8 +164,8 @@ export default function Home() {
         <Box sx={{ width: 250, p: 2 }}>
           <List>
             {navItems.map((item) => (
-              <ListItem key={item.id} component="button" sx={{border: 'none',background: 'transparent'}} onClick={() => handleScrollTo(item.id)}>
-                <ListItemText sx={{color: '#114dc7'}} primary={item.label} />
+              <ListItem key={item.id} component="button" sx={{ border: 'none', background: 'transparent' }} onClick={() => handleScrollTo(item.id)}>
+                <ListItemText sx={{ color: '#114dc7' }} primary={item.label} />
               </ListItem>
             ))}
             <ListItem>
@@ -193,19 +196,19 @@ export default function Home() {
         <WhyCallMePage />
       </Box>
       <Box id="clients">
-        <ClientsPage/>
+        <ClientsPage />
       </Box>
       <Box id="services">
-        <ServicesPage/>
+        <ServicesPage />
       </Box>
       <Box id="casestudy">
-        <CaseStudyPage/>
+        <CaseStudyPage />
       </Box>
       <Box id="whysialytics">
-        <WhyUsPage/>
+        <WhyUsPage />
       </Box>
       <Box>
-        <Footer/>
+        <Footer />
       </Box>
     </>
   );

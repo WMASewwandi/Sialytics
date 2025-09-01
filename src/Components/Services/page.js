@@ -1,12 +1,26 @@
 "use client";
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Box, Typography, Card, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import CardData from "./data";
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
 export default function ServicesPage() {
+    const sectionRef = useRef(null);
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) setVisible(true);
+            },
+            { threshold: 0.2 }
+        );
+        if (sectionRef.current) observer.observe(sectionRef.current);
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        <Box sx={{ px: { xs: 3, md: 10 }, pt: { xs: 5, md: 10 }, backgroundColor: '#0041c2' }}>
+        <Box ref={sectionRef} sx={{ px: { xs: 3, md: 10 }, pt: { xs: 5, md: 10 }, backgroundColor: '#0041c2' }}>
             <Typography variant="h4" sx={{ color: '#fff', fontWeight: 600, mb: 6, fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' } }}>
                 My Services
             </Typography>
@@ -17,9 +31,9 @@ export default function ServicesPage() {
                 justifyItems: 'center',
                 pb: { xs: 5 }
             }}>
-                {CardData.map((card, index) => (
+                {CardData.map((card, cardIndex) => (
                     <Card
-                        key={index}
+                        key={cardIndex}
                         sx={{
                             backgroundColor: '#fff',
                             color: '#000',
@@ -31,8 +45,8 @@ export default function ServicesPage() {
                             textAlign: 'center',
                         }}
                     >
-                        <Box sx={{ flex: 1,p:3 }}>
-                            <Box display="flex" justifyContent={{xs: "center", md: 'start'}} alignItems="center" gap={2} px={2} pt={2}>
+                        <Box sx={{ flex: 1, p: 3 }}>
+                            <Box display="flex" justifyContent={{ xs: "center", md: 'start' }} alignItems="center" gap={2} px={2} pt={2}>
                                 <img src={card.image} width={60} height={60} />
                             </Box>
                             <Box display="flex" alignItems="center" gap={2} p={2}>
@@ -41,12 +55,24 @@ export default function ServicesPage() {
                             <Box display="flex" justifyContent="start">
                                 <List>
                                     {card.list.map((item, index) => (
-                                        <ListItem key={index} disablePadding sx={{ width: "100%" }}>
+                                        <ListItem
+                                            key={index}
+                                            disablePadding
+                                            sx={{
+                                                width: "100%",
+                                                transform: visible ? "translateY(0)" : "translateY(20px)",
+                                                opacity: visible ? 1 : 0,
+                                                transition: `all 0.5s ease ${index * 0.2}s`
+                                            }}
+                                        >
                                             <ListItemButton>
                                                 <ListItemIcon>
                                                     <CheckCircleOutlineIcon sx={{ color: '#538ffd' }} />
                                                 </ListItemIcon>
-                                                <ListItemText primary={item} primaryTypographyProps={{ sx: { fontSize: "0.9rem", color: '#7d7d7d' } }} />
+                                                <ListItemText
+                                                    primary={item}
+                                                    primaryTypographyProps={{ sx: { fontSize: "0.9rem", color: '#7d7d7d' } }}
+                                                />
                                             </ListItemButton>
                                         </ListItem>
                                     ))}
@@ -55,7 +81,6 @@ export default function ServicesPage() {
                         </Box>
                     </Card>
                 ))}
-
             </Box>
         </Box>
     );

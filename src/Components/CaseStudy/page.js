@@ -1,17 +1,29 @@
 "use client";
-import React from "react";
-import { Box, Card, CardMedia, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material";
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import React, { useRef, useEffect, useState } from "react";
+import { Box, Card, List, ListItem, ListItemText, Typography } from "@mui/material";
 import CardData from "./data";
 
-
 export default function CaseStudyPage() {
+  const sectionRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setVisible(true);
+      },
+      { threshold: 0.2 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Box
+      ref={sectionRef}
       sx={{
         display: "flex",
         width: "100vw",
-        // minHeight: "100vh",
         flexDirection: { xs: "column", md: "row" },
         position: "relative",
       }}
@@ -25,7 +37,6 @@ export default function CaseStudyPage() {
           mt: { xs: 10, md: 5 },
           px: { xs: 3, md: 3 },
           textAlign: { xs: "center", md: "left" },
-          // background: '#fff'
         }}
       >
         <Box>
@@ -54,38 +65,27 @@ export default function CaseStudyPage() {
         </Box>
         <Box>
           <List sx={{ listStyleType: "disc", pl: 2 }}>
-            <ListItem sx={{ display: "list-item" }}>
-              <ListItemText
-                primary={
-                  <span>
-                    <strong>System alignment:</strong> Identifying options for unifying fragmented customer data and evaluating integration approaches.
-                  </span>
-                }
-                primaryTypographyProps={{ sx: { fontSize: "0.9rem", color: '#7d7d7d' } }}
-              />
-            </ListItem>
-            <ListItem sx={{ display: "list-item" }}>
-              <ListItemText
-                primary={
-                  <span>
-                    <strong>Customer KPIs:</strong> Defining the right performance measures that connect directly to business goals.
-                  </span>
-                }
-                primaryTypographyProps={{ sx: { fontSize: "0.9rem", color: '#7d7d7d' } }}
-              />
-            </ListItem>
-            <ListItem sx={{ display: "list-item" }}>
-              <ListItemText
-                primary={
-                  <span>
-                    <strong>Customer models:</strong> Outlining the types of analytical models that can surface profitability, retention, and growth drivers.
-                  </span>
-                }
-                primaryTypographyProps={{ sx: { fontSize: "0.9rem", color: '#7d7d7d' } }}
-              />
-            </ListItem>
+            {[
+              <span><strong>System alignment:</strong> Identifying options for unifying fragmented customer data and evaluating integration approaches.</span>,
+              <span><strong>Customer KPIs:</strong> Defining the right performance measures that connect directly to business goals.</span>,
+              <span><strong>Customer models:</strong> Outlining the types of analytical models that can surface profitability, retention, and growth drivers.</span>
+            ].map((item, index) => (
+              <ListItem
+                key={index}
+                sx={{
+                  display: "list-item",
+                  transform: visible ? "translateY(0)" : "translateY(20px)",
+                  opacity: visible ? 1 : 0,
+                  transition: `all 0.5s ease ${index * 0.2}s`
+                }}
+              >
+                <ListItemText
+                  primary={item}
+                  primaryTypographyProps={{ sx: { fontSize: "0.9rem", color: '#7d7d7d' } }}
+                />
+              </ListItem>
+            ))}
           </List>
-
         </Box>
         <Box>
           <Typography sx={{ my: 2, fontWeight: 200, color: '#9d9b98', fontSize: '1rem', width: '90%' }}>
@@ -129,6 +129,9 @@ export default function CaseStudyPage() {
                       display: "flex",
                       mt: 2,
                       px: 3,
+                      transform: visible ? "translateY(0)" : "translateY(20px)",
+                      opacity: visible ? 1 : 0,
+                      transition: `all 0.5s ease ${index * 0.2}s`
                     }}
                   >
                     <Box
@@ -137,7 +140,6 @@ export default function CaseStudyPage() {
                       alignItems="center"
                       width="100%"
                     >
-                      {/* Left side (Image) */}
                       <Box
                         sx={{
                           width: { xs: "100%", md: "40%" },
@@ -150,7 +152,6 @@ export default function CaseStudyPage() {
                         <img src={card.image} width={70} height={70} />
                       </Box>
 
-                      {/* Right side (Text) */}
                       <Box
                         sx={{
                           width: { xs: "100%", md: "60%" },
@@ -182,8 +183,6 @@ export default function CaseStudyPage() {
           </Box>
         </Box>
       </Box>
-
-
     </Box>
   );
 }

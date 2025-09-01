@@ -30,7 +30,10 @@ export default function HomePage() {
           objectFit: "cover",
         }}
       >
-        <source src="https://framerusercontent.com/assets/sAhkVr5ARdmMQzflRUwXhT5lzMU.mp4" type="video/mp4" />
+        <source
+          src="https://framerusercontent.com/assets/sAhkVr5ARdmMQzflRUwXhT5lzMU.mp4"
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
 
@@ -53,28 +56,31 @@ export default function HomePage() {
           bottom: { xs: "50%", md: 100 },
           left: { xs: "50%", md: 150 },
           transform: {
-            xs: "translate(-50%, 50%)", 
+            xs: "translate(-50%, 50%)",
             md: "none",
           },
           textAlign: { xs: "center", md: "left" },
           justifyContent: "center",
           zIndex: 3,
-          width: { xs: "80%", md: "auto" }, 
+          width: { xs: "80%", md: "auto" },
         }}
       >
         <Grid item xs={12} md={8} lg={6}>
           <Typography
             variant="h4"
+            className="fadeUp"
             sx={{
               color: "white",
               fontWeight: "bold",
-              fontSize: { xs: "2rem", sm: "2rem", md: "3rem" },
+              fontSize: { xs: "2rem", sm: "2rem", md: "5rem" },
             }}
           >
-            Turning Data into a Growth Engine
+            Turning Data into <br/> a Growth Engine
           </Typography>
+
           <Typography
             variant="h6"
+            className="fadeUp delay"
             sx={{
               color: "white",
               opacity: 0.8,
@@ -86,6 +92,25 @@ export default function HomePage() {
           </Typography>
         </Grid>
       </Grid>
+
+      <style jsx global>{`
+        @keyframes fadeUp {
+          0% {
+            opacity: 0;
+            transform: translateY(50px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .fadeUp {
+          animation: fadeUp 1s ease-out forwards;
+        }
+        .fadeUp.delay {
+          animation-delay: 0.3s;
+        }
+      `}</style>
     </Box>
   );
 }
