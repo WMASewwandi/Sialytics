@@ -109,10 +109,10 @@ export default function CaseStudyPage() {
               }}
             >
               <Box display="flex" flexDirection={{ xs: "column", md: "row" }} alignItems="center" width="100%">
-                <Box sx={{ width: { xs: "100%", md: "20%" }, display: "flex", justifyContent: { xs: "center", md: "flex-start" }, alignItems: "center", p: 2 }}>
+                <Box sx={{ width: { xs: "100%", md: "25%" }, display: "flex", justifyContent: { xs: "center", md: "flex-start" }, alignItems: "center", p: 2 }}>
                   <img src={card.image} width={70} height={70} alt={card.name} />
                 </Box>
-                <Box sx={{ width: { xs: "100%", md: "80%" }, p: 2, textAlign: { xs: "center", md: "left" } }}>
+                <Box sx={{ width: { xs: "100%", md: "75%" }, p: 2, textAlign: { xs: "center", md: "left" } }}>
                   <Typography variant="h6" sx={{ fontWeight: 600 }}>{card.name}</Typography>
                   <Typography sx={{ my: 2, fontWeight: 200, color: "#9d9b98", fontSize: "1rem", maxWidth: "90%", mx: { xs: "auto", md: 0 } }}>
                     {card.description}
