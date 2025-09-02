@@ -154,12 +154,20 @@ export default function Footer() {
               <IconButton sx={{ color: "#114dc7" }}>
                 <YouTubeIcon />
               </IconButton> */}
-              <Box sx={{cursor: 'pointer'}} display="flex" gap={1} alignItems="center">
-                <IconButton sx={{ color: "#114dc7" }}>
-                  <LinkedInIcon />
-                </IconButton>
-                <Typography sx={{color: '#fff'}}>Let's Connect</Typography>
+              <Box sx={{ cursor: 'pointer' }} display="flex" gap={1} alignItems="center">
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}
+                >
+                  <IconButton sx={{ color: "#114dc7" }}>
+                    <LinkedInIcon />
+                  </IconButton>
+                  <Typography sx={{ color: '#fff' }}>Let&apos;s Connect</Typography>
+                </a>
               </Box>
+
             </Box>
           </Box>
         </Grid>
