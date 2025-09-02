@@ -12,7 +12,7 @@ const cards = [
 export default function WhyCallMePage() {
     return (
         <Box sx={{ px: { xs: 3, md: 10 }, pt: { xs: 5, md: 10 }, backgroundColor: '#0041c2'}}>
-            <Typography variant="h4" sx={{ color: '#fff', fontWeight: 600, mb: 6, fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' } ,color: '#191919'}}>
+            <Typography variant="h4" sx={{ color: '#fff', fontWeight: 600, mb: 6, fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' } }}>
                 Why Companies Call Me
             </Typography>
             <Box sx={{

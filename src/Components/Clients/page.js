@@ -21,7 +21,7 @@ export default function ClientsPage() {
 
     return (
         <Box ref={sectionRef} sx={{ px: { xs: 3, md: 10 }, pt: { xs: 5, md: 10 }, minHeight: '90vh' }}>
-            <Typography variant="h4" sx={{ fontWeight: 600, mb: 6, fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' } }}>
+            <Typography variant="h4" sx={{ fontWeight: 600, mb: 6, fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem',color: '#191919' } }}>
                 Who I Work With
             </Typography>
             <Box sx={{
