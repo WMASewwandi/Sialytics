@@ -50,11 +50,11 @@ export default function CaseStudyPage() {
           Customer Analytics and Lifetime Value (LTV) Expansion
         </Typography>
         <Typography variant="h6" sx={{ mt: 3, color: '#4c4d52', fontWeight: 600 }}>Challenge</Typography>
-        <Typography sx={{ mt: 2, fontWeight: 200, color: '#9d9b98', fontSize: '1rem', width: '90%' }}>
+        <Typography sx={{ mt: 2, fontWeight: 200, color: '#191919', fontSize: '1rem', width: '90%' }}>
           Many companies struggle to capture the full value of their customer data. Information is often fragmented across legacy systems, limiting visibility into who customers really are, why they transact, and how best to engage them. Without a unified view, leaders find it difficult to measure profitability, retention, or the true impact of digital initiatives.
         </Typography>
         <Typography variant="h6" sx={{ mt: 3, color: '#4c4d52', fontWeight: 600 }}>How I Partner</Typography>
-        <Typography sx={{ mt: 2, fontWeight: 200, color: '#9d9b98', fontSize: '1rem', width: '90%' }}>
+        <Typography sx={{ mt: 2, fontWeight: 200, color: '#191919', fontSize: '1rem', width: '90%' }}>
           I work with you to create a plan and set of initiatives that unify and enrich customer data, enabling a more complete view of the customer base. My role is to help leadership prioritize and shape the path forward so teams can execute with clarity. Planning considerations may include:
         </Typography>
         <List sx={{ listStyleType: "disc", pl: 2 }}>
@@ -68,11 +68,11 @@ export default function CaseStudyPage() {
                 transition: `all 0.5s ease ${index * 0.2}s`
               }}
             >
-              <ListItemText primary={text} primaryTypographyProps={{ sx: { fontSize: "0.9rem", color: '#7d7d7d' } }} />
+              <ListItemText primary={text} primaryTypographyProps={{ sx: { fontSize: "0.9rem", color: '#191919' } }} />
             </ListItem>
           ))}
         </List>
-        <Typography sx={{ my: 2, fontWeight: 200, color: '#9d9b98', fontSize: '1rem', width: '90%' }}>
+        <Typography sx={{ my: 2, fontWeight: 200, color: '#191919', fontSize: '1rem', width: '90%' }}>
           From this foundation, segmentation and journey mapping can reveal which customers to target, which behaviors to influence, and how to accelerate digital adoption. Predictive insights and engagement strategies can then provide forward-looking guidance, helping companies shape customer actions and unlock more effective acquisition, retention, and growth.
         </Typography>
       </Box>
