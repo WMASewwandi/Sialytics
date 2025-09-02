@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
 import { Box, Typography, Grid, Button, IconButton } from "@mui/material";
-import { Facebook, Twitter, Instagram } from "@mui/icons-material";
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export default function Footer() {
   return (
@@ -58,24 +56,23 @@ export default function Footer() {
         spacing={2}
         sx={{
           position: "absolute",
-          bottom: { xs: "50%", md: 100 },
-          left: { xs: "50%", md: 150 },
-          transform: {
-            xs: "translate(-50%, 50%)",
-            md: "none",
-          },
-          textAlign: { xs: "center", md: "left" },
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          textAlign: "center",
           zIndex: 3,
           width: { xs: "90%", md: "80%" },
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
         <Grid item>
           <Box
             sx={{
               display: "flex",
-              justifyContent: "space-between",
+              flexDirection: "column", // 👈 always column
+              justifyContent: "center",
               alignItems: "center",
-              flexDirection: { xs: "column", md: "row" },
               gap: 2,
               p: 2,
               width: "100%",
@@ -121,53 +118,45 @@ export default function Footer() {
           <Box
             sx={{
               display: "flex",
-              justifyContent: "space-between",
-              alignItems: { xs: "center", md: "flex-start" },
-              flexDirection: { xs: "column", md: "row" },
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
               gap: 2,
               p: 2,
               width: "100%",
             }}
           >
-            <Box>
-              <Typography sx={{ color: "#114dc7", fontSize: "1rem" }}>
-                getsialytics@gmail.com
-              </Typography>
-              <Typography sx={{ color: "#114dc7", fontSize: "1rem" }}>
-                469-835-4062
-              </Typography>
-              <Typography sx={{ color: "#114dc7", fontSize: "1rem" }}>
-                sialytics.com
-              </Typography>
-            </Box>
-
-            <Box sx={{ display: "flex", gap: 2 }}>
-              {/* <IconButton sx={{ color: "#114dc7" }}>
-                <Facebook />
-              </IconButton>
-              <IconButton sx={{ color: "#114dc7" }}>
-                <Twitter />
-              </IconButton>
-              <IconButton sx={{ color: "#114dc7" }}>
-                <Instagram />
-              </IconButton>
-              <IconButton sx={{ color: "#114dc7" }}>
-                <YouTubeIcon />
-              </IconButton> */}
-              <Box sx={{ cursor: 'pointer' }} display="flex" gap={1} alignItems="center">
-                <a
-                  href="https://www.linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}
-                >
-                  <IconButton sx={{ color: "#114dc7" }}>
-                    <LinkedInIcon />
-                  </IconButton>
-                  <Typography sx={{ color: '#fff' }}>Let&apos;s Connect</Typography>
-                </a>
-              </Box>
-
+            <Typography sx={{ color: "#114dc7", fontSize: "1rem" }}>
+              getsialytics@gmail.com
+            </Typography>
+            <Typography sx={{ color: "#114dc7", fontSize: "1rem" }}>
+              469-835-4062
+            </Typography>
+            <Typography sx={{ color: "#114dc7", fontSize: "1rem" }}>
+              sialytics.com
+            </Typography>
+            <Box
+              sx={{ cursor: "pointer" }}
+              display="flex"
+              gap={1}
+              alignItems="center"
+              justifyContent="center"
+            >
+              <a
+                href="https://www.linkedin.com/in/sia-zahedi-1532987/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  textDecoration: "none",
+                }}
+              >
+                <IconButton sx={{ color: "#114dc7" }}>
+                  <LinkedInIcon />
+                </IconButton>
+                <Typography sx={{ color: "#fff" }}>Let&apos;s Connect</Typography>
+              </a>
             </Box>
           </Box>
         </Grid>

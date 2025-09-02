@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid, Button } from "@mui/material";
 
 export default function HomePage() {
   return (
@@ -75,7 +75,7 @@ export default function HomePage() {
               fontSize: { xs: "2rem", sm: "2rem", md: "5rem" },
             }}
           >
-            Turning Data into <br/> a Growth Engine
+            Turning Data into <br /> a Growth Engine
           </Typography>
 
           <Typography
@@ -90,6 +90,21 @@ export default function HomePage() {
           >
             Empowering businesses with insights & innovation
           </Typography>
+          <Box sx={{ mt: 2, display: { xs: 'flex', md: 'none' },justifyContent: 'center' }}>
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: "#114dc7",
+                color: "white",
+                textTransform: "none",
+                borderRadius: "25px",
+                width: '50%',
+                "&:hover": { backgroundColor: "#114dc7" },
+              }}
+            >
+              Book a call
+            </Button>
+          </Box>
         </Grid>
       </Grid>
 

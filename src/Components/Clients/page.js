@@ -48,7 +48,7 @@ export default function ClientsPage() {
                         <Box sx={{ flex: 7, p: 2 }}>
                             <Box display="flex" alignItems="center" gap={2} p={2}>
                                 <img src={card.image} width={50} height={50} />
-                                <Typography variant="h6" sx={{ fontWeight: '600' }}>{card.name}</Typography>
+                                <Typography variant="h5" sx={{ fontWeight: '600' }}>{card.name}</Typography>
                             </Box>
                             <Box display="flex" justifyContent="start" mt={3}>
                                 <Typography sx={{ color: "#6da3fc", fontWeight: '600' }}>Why They Call:</Typography>

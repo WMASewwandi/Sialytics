@@ -168,7 +168,7 @@ export default function Home() {
                 <ListItemText sx={{ color: '#114dc7' }} primary={item.label} />
               </ListItem>
             ))}
-            <ListItem>
+            {/* <ListItem>
               <Button
                 fullWidth
                 variant="contained"
@@ -182,7 +182,7 @@ export default function Home() {
               >
                 Book a call
               </Button>
-            </ListItem>
+            </ListItem> */}
           </List>
         </Box>
       </Drawer>

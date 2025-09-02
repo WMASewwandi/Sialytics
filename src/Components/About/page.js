@@ -69,7 +69,7 @@ export default function AboutPage() {
           }}
         >
           <Box>
-            <Typography variant="h4" sx={{ fontWeight: 600, fontSize: { xs: "1.5rem", md: "2rem" } }}>
+            <Typography variant="h4" sx={{ fontWeight: 600, fontSize: { xs: "1.5rem", md: "2rem",color: '#191919' } }}>
               25+ Years of <br />Leadership Experience
             </Typography>
             <List sx={{ mt: 2, px: 0 }}>
@@ -84,7 +84,7 @@ export default function AboutPage() {
                     <ListItemIcon>
                       <CheckCircleOutlineIcon sx={{ color: '#538ffd' }} />
                     </ListItemIcon>
-                    <ListItemText primary={item} primaryTypographyProps={{ sx: { fontSize: { xs: "0.9rem", md: "1rem" } } }} />
+                    <ListItemText primary={item} primaryTypographyProps={{ sx: { fontSize: { xs: "0.9rem", md: "1rem" },color: '#191919' } }} />
                   </ListItemButton>
                 </ListItem>
               ))}
