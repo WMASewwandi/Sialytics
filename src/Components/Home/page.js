@@ -99,6 +99,7 @@ export default function HomePage() {
                 textTransform: "none",
                 borderRadius: "25px",
                 width: '50%',
+                height: '50px',
                 "&:hover": { backgroundColor: "#114dc7" },
               }}
             >
