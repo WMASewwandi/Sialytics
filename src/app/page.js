@@ -49,7 +49,7 @@ export default function Home() {
   const navItems = [
     { label: "About", id: "about" },
     { label: "Why Call Me", id: "whycallme" },
-    { label: "Clients", id: "clients" },
+    { label: "Who I Work With", id: "clients" },
     { label: "Services", id: "services" },
     { label: "Case Study", id: "casestudy" },
     { label: "Why Sialytics", id: "whysialytics" },
@@ -189,19 +189,19 @@ export default function Home() {
       <Box id="home" sx={{ height: "100vh" }}>
         <HomePage />
       </Box>
-      <Box id="about">
+      <Box id="about" sx={{background: '#fff'}}>
         <AboutPage />
       </Box>
       <Box id="whycallme">
         <WhyCallMePage />
       </Box>
-      <Box id="clients">
+      <Box id="clients" sx={{background: '#fff'}}>
         <ClientsPage />
       </Box>
       <Box id="services">
         <ServicesPage />
       </Box>
-      <Box id="casestudy">
+      <Box id="casestudy" sx={{background: '#fff'}}>
         <CaseStudyPage />
       </Box>
       <Box id="whysialytics">

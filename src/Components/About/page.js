@@ -70,7 +70,7 @@ export default function AboutPage() {
         >
           <Box>
             <Typography variant="h4" sx={{ fontWeight: 600, fontSize: { xs: "1.5rem", md: "2rem" } }}>
-              25+ Years of Data <br />Leadership Experience
+              25+ Years of <br />Leadership Experience
             </Typography>
             <List sx={{ mt: 2, px: 0 }}>
               {listItems.map((item, index) => (

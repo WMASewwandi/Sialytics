@@ -71,7 +71,7 @@ export default function ServicesPage() {
                                                 </ListItemIcon>
                                                 <ListItemText
                                                     primary={item}
-                                                    primaryTypographyProps={{ sx: { fontSize: "0.9rem", color: '#7d7d7d' } }}
+                                                    primaryTypographyProps={{ sx: { fontSize: "1.2rem", color: '#7d7d7d' } }}
                                                 />
                                             </ListItemButton>
                                         </ListItem>

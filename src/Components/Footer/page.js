@@ -3,6 +3,7 @@ import React from "react";
 import { Box, Typography, Grid, Button, IconButton } from "@mui/material";
 import { Facebook, Twitter, Instagram } from "@mui/icons-material";
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export default function Footer() {
   return (
@@ -141,7 +142,7 @@ export default function Footer() {
             </Box>
 
             <Box sx={{ display: "flex", gap: 2 }}>
-              <IconButton sx={{ color: "#114dc7" }}>
+              {/* <IconButton sx={{ color: "#114dc7" }}>
                 <Facebook />
               </IconButton>
               <IconButton sx={{ color: "#114dc7" }}>
@@ -152,8 +153,13 @@ export default function Footer() {
               </IconButton>
               <IconButton sx={{ color: "#114dc7" }}>
                 <YouTubeIcon />
-              </IconButton>
-
+              </IconButton> */}
+              <Box sx={{cursor: 'pointer'}} display="flex" gap={1} alignItems="center">
+                <IconButton sx={{ color: "#114dc7" }}>
+                  <LinkedInIcon />
+                </IconButton>
+                <Typography sx={{color: '#fff'}}>Let's Connect</Typography>
+              </Box>
             </Box>
           </Box>
         </Grid>

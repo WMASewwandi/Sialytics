@@ -2,17 +2,17 @@ const CardData = [
     {
         name: "Digital Growth Acceleration",
         image: "https://framerusercontent.com/images/FNLB7gJulwyXzjq12tHCETQsIQ.png?width=54&height=52",
-        description: "Increased LTV by 20%, reduced CAC by 15%"
+        description: "By providing proven approaches to increase LTV, reduce CAC"
     },
     {
-        name: "Portfolio Optimization",
+        name: "Product Optimization",
         image: "https://framerusercontent.com/images/UHBLMq3563BZOjQ24SahPYyQNg.png?width=52&height=51",
-        description: "Improved reporting speed by 40% across 5 PE-owned companies"
+        description: "By providing insights on how to boost digital funnel conversion"
     },
     {
-        name: "Risk Reduction",
+        name: "Churn Reduction",
         image: "https://framerusercontent.com/images/0mihIEqXALIWwDXUzRYMdgjM.png?width=47&height=52",
-        description: "Reduced fraud losses by 30% YoY with predictive analytics"
+        description: "By implementing CRM strategies to improve retention rates"
     },
 ];
 

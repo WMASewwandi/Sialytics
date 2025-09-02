@@ -4,7 +4,7 @@ const CardData = [
         image: "https://framerusercontent.com/images/BbCqA3oP1svlmcGgDjkuwWUWlfw.png?width=200&height=200",
         list: [
             "Executive-level leadership without full-time cost",
-            "Align strategy, KPIs, and analyticsacross the org",
+            "Align strategy, KPIs, and analytics across the org",
         ],
     },
     {

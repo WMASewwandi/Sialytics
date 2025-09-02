@@ -1,13 +1,13 @@
 const CardData = [
     {
-        name: "Founders & CEOs",
+        name: "Founder & CEO",
         image: "https://framerusercontent.com/images/Ax4ErggYrnFlKodWYV64BONhlI.png?width=200&height=200",
         list: [
             "They are scaling quickly and need a clear, data-backed strategy to prioritize investments and growth initiatives.",
             "They’re preparing for a raise and need metrics and insights to inspire investor confidence.",
             "They want to align their leadership team around a common set of KPIs and execution priorities."
         ],
-        bottom: "They want to align their leadership team around a common set of KPIs and execution priorities."
+        bottom: "A data strategy that turns vision into actionable insights, aligns teams on priorities, accelerates execution, and strengthens investor readiness."
     },
     {
         name: "Private Equity & Investors",

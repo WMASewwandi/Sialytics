@@ -89,7 +89,7 @@ export default function CaseStudyPage() {
           position: "relative",
         }}
       >
-        <Typography variant="h5" sx={{ color: "#3f6fdd", fontWeight: 600 }}>The Results:</Typography>
+        <Typography variant="h5" sx={{ color: "#3f6fdd", fontWeight: 600 }}>Impact:</Typography>
         <Box width="100%" mt={2}>
           {CardData.map((card, index) => (
             <Card
