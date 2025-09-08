@@ -36,12 +36,11 @@ export default function Footer() {
         }}
       >
         <source
-          src="https://framerusercontent.com/assets/sAhkVr5ARdmMQzflRUwXhT5lzMU.mp4"
+          src='/video/bg.mp4'
           type="video/mp4"
         />
         Your browser does not support the video tag.
       </video>
-
       <Box
         sx={{
           position: "absolute",
@@ -84,7 +83,7 @@ export default function Footer() {
           >
             <Box
               component="img"
-              src="https://framerusercontent.com/images/Meg2UdYRmDUv1QAt3p3TYHTMYE.png?width=1024&height=264"
+              src='/logo/logo-w.png'
               alt="Logo"
               sx={{ height: 55 }}
             />

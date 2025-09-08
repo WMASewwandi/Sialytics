@@ -1,7 +1,7 @@
 const CardData = [
     {
         name: "Fractional Chief Data Officer",
-        image: "https://framerusercontent.com/images/BbCqA3oP1svlmcGgDjkuwWUWlfw.png?width=200&height=200",
+        image: '/images/ms1.avif',
         list: [
             "Executive-level leadership without full-time cost",
             "Align strategy, KPIs, and analytics across the org",
@@ -9,7 +9,7 @@ const CardData = [
     },
     {
         name: "Data Strategy Development",
-        image: "https://framerusercontent.com/images/UzU8cx40vmkWhtPw2ysxyzOcD8.png?width=200&height=200",
+        image: '/images/ms2.avif',
         list: [
             "Capability gap assessment",
             "Strategic data framework & tailored playbook",
@@ -17,7 +17,7 @@ const CardData = [
     },
     {
         name: "KPI Alignment & Roadmap",
-        image: "https://framerusercontent.com/images/Xcyb6aXrOeAAYwpZ2FhgQuGqs7A.png?width=200&height=200",
+        image: '/images/ms3.avif',
         list: [
             "Connect metrics to growth and efficiency",
             "Design performance tracking dashboards",

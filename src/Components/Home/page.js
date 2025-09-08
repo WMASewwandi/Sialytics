@@ -34,7 +34,7 @@ export default function HomePage() {
         }}
       >
         <source
-          src="https://framerusercontent.com/assets/sAhkVr5ARdmMQzflRUwXhT5lzMU.mp4"
+          src='/video/bg.mp4'
           type="video/mp4"
         />
         Your browser does not support the video tag.
