@@ -64,6 +64,10 @@ export default function Home() {
     }
   };
 
+  const navigateToCalendly = () => {
+    window.open("https://calendly.com/getsialytics/30min", "_blank", "noopener,noreferrer");
+  };
+
 
   return (
     <>
@@ -143,6 +147,7 @@ export default function Home() {
                   backgroundColor: scrolled ? "#114dc7" : "#1565c0",
                 },
               }}
+              onClick={navigateToCalendly}
             >
               Book a call
             </Button>
@@ -168,40 +173,25 @@ export default function Home() {
                 <ListItemText sx={{ color: '#114dc7' }} primary={item.label} />
               </ListItem>
             ))}
-            {/* <ListItem>
-              <Button
-                fullWidth
-                variant="contained"
-                sx={{
-                  backgroundColor: "#114dc7",
-                  color: "white",
-                  textTransform: "none",
-                  borderRadius: "25px",
-                  "&:hover": { backgroundColor: "#114dc7" },
-                }}
-              >
-                Book a call
-              </Button>
-            </ListItem> */}
           </List>
         </Box>
       </Drawer>
       <Box id="home" sx={{ height: "100vh" }}>
         <HomePage />
       </Box>
-      <Box id="about" sx={{background: '#fff'}}>
+      <Box id="about" sx={{ background: '#fff' }}>
         <AboutPage />
       </Box>
       <Box id="whycallme">
         <WhyCallMePage />
       </Box>
-      <Box id="clients" sx={{background: '#fff'}}>
+      <Box id="clients" sx={{ background: '#fff' }}>
         <ClientsPage />
       </Box>
       <Box id="services">
         <ServicesPage />
       </Box>
-      <Box id="casestudy" sx={{background: '#fff'}}>
+      <Box id="casestudy" sx={{ background: '#fff' }}>
         <CaseStudyPage />
       </Box>
       <Box id="whysialytics">

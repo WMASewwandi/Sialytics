@@ -3,6 +3,9 @@ import React from "react";
 import { Box, Typography, Grid, Button } from "@mui/material";
 
 export default function HomePage() {
+  const navigateToCalendly = () => {
+    window.open("https://calendly.com/getsialytics/30min", "_blank", "noopener,noreferrer");
+  };
   return (
     <Box
       sx={{
@@ -90,7 +93,7 @@ export default function HomePage() {
           >
             Empowering businesses with insights & innovation
           </Typography>
-          <Box sx={{ mt: 2, display: { xs: 'flex', md: 'none' },justifyContent: 'center' }}>
+          <Box sx={{ mt: 2, display: { xs: 'flex', md: 'none' }, justifyContent: 'center' }}>
             <Button
               variant="contained"
               sx={{
@@ -102,6 +105,7 @@ export default function HomePage() {
                 height: '50px',
                 "&:hover": { backgroundColor: "#114dc7" },
               }}
+              onClick={navigateToCalendly}
             >
               Book a call
             </Button>

@@ -4,6 +4,10 @@ import { Box, Typography, Grid, Button, IconButton } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export default function Footer() {
+  const navigateToCalendly = () => {
+    window.open("https://calendly.com/getsialytics/30min", "_blank", "noopener,noreferrer");
+  };
+
   return (
     <Box
       sx={{
@@ -95,6 +99,7 @@ export default function Footer() {
                 px: 3,
                 "&:hover": { backgroundColor: "#114dc7" },
               }}
+              onClick={navigateToCalendly}
             >
               Book a call
             </Button>
@@ -121,18 +126,18 @@ export default function Footer() {
               justifyContent: "center",
               alignItems: "center",
               flexDirection: "column",
-              gap: 2,
+              gap: 1,
               p: 2,
               width: "100%",
             }}
           >
-            <Typography sx={{ color: "#114dc7", fontSize: "1rem" }}>
+            <Typography sx={{ color: "#fff", fontSize: "1rem" }}>
               getsialytics@gmail.com
             </Typography>
-            <Typography sx={{ color: "#114dc7", fontSize: "1rem" }}>
+            <Typography sx={{ color: "#fff", fontSize: "1rem" }}>
               469-835-4062
             </Typography>
-            <Typography sx={{ color: "#114dc7", fontSize: "1rem" }}>
+            <Typography sx={{ color: "#fff", fontSize: "1rem" }}>
               sialytics.com
             </Typography>
             <Box
