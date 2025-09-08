@@ -144,7 +144,7 @@ export default function AboutPage() {
           >
             <CardMedia
               component="img"
-              image="https://framerusercontent.com/images/mMuY3tASVbgGIY5uslfNo38P4.png?scale-down-to=512&width=950&height=950"
+              image='/images/sia.avif'
               alt="Example Image"
               sx={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
@@ -166,7 +166,7 @@ export default function AboutPage() {
         >
           <CardMedia
             component="img"
-            image="https://framerusercontent.com/images/mMuY3tASVbgGIY5uslfNo38P4.png?scale-down-to=512&width=950&height=950"
+            image='/images/sia.avif'
             alt="Example Image"
             sx={{ width: "100%", height: "100%", objectFit: "cover" }}
           />

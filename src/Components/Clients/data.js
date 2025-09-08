@@ -1,7 +1,7 @@
 const CardData = [
     {
         name: "Founder & CEO",
-        image: "https://framerusercontent.com/images/Ax4ErggYrnFlKodWYV64BONhlI.png?width=200&height=200",
+        image: '/images/www1.avif',
         list: [
             "They are scaling quickly and need a clear, data-backed strategy to prioritize investments and growth initiatives.",
             "They’re preparing for a raise and need metrics and insights to inspire investor confidence.",
@@ -11,7 +11,7 @@ const CardData = [
     },
     {
         name: "Private Equity & Investors",
-        image: "https://framerusercontent.com/images/RkIXryiF9M0QoeLSxoGvQOvfYU.png?width=200&height=200",
+        image: '/images/www2.avif',
         list: [
             "They need portfolio companies to reach their full market potential and scale efficiently.",
             "They want to uncover hidden value or identify quick wins across portfolio companies.",
@@ -21,7 +21,7 @@ const CardData = [
     },
     {
         name: "CFOs & Business Leaders",
-        image: "https://framerusercontent.com/images/BtuSKCdqw5jdljj1Fj1iBCXQr9U.png?width=200&height=200",
+        image: '/images/www3.avif',
         list: [
             "They need tighter alignment between financial goals and operational performance.",
             "They want to improve forecasting accuracy and cost control with better KPI tracking.",

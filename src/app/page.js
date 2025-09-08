@@ -87,8 +87,8 @@ export default function Home() {
               component="img"
               src={
                 scrolled
-                  ? "https://framerusercontent.com/images/EsvMCDiMo5S52D5AYrO8J0MJdQ.png?width=1024&height=257"
-                  : "https://framerusercontent.com/images/Meg2UdYRmDUv1QAt3p3TYHTMYE.png?width=1024&height=264"
+                  ? '/logo/logo-b.png'
+                  : '/logo/logo-w.png'
               }
               alt="Logo"
               sx={{ height: 55 }}
