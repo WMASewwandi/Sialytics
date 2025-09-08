@@ -11,7 +11,7 @@ const CardData = [
     },
     {
         name: "Churn Reduction",
-        image: '/images/im3.avif',
+        image: '/images/im3.png',
         description: "By implementing CRM strategies to improve retention rates"
     },
 ];
