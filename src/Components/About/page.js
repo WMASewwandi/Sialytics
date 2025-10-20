@@ -161,7 +161,17 @@ export default function AboutPage() {
             height: { md: "350px" },
             borderRadius: "20px",
             zIndex: 2,
-            display: { xs: "none", md: "block" }
+            display: { xs: "none", md: "block" },
+            "&": {
+              "@media (max-width: 1400px)": {
+                width: "220px",
+                height: "250px"
+              },
+              "@media (max-width: 1280px)": {
+                width: "180px",
+                height: "210px"
+              }
+            }
           }}
         >
           <CardMedia
