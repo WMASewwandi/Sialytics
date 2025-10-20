@@ -12,7 +12,20 @@ const cards = [
 export default function WhyCallMePage() {
     return (
         <Box sx={{ px: { xs: 3, md: 10 }, pt: { xs: 5, md: 10 }, backgroundColor: '#0041c2'}}>
-            <Typography variant="h4" sx={{ color: '#fff', fontWeight: 600, mb: 6, fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' } }}>
+            <Typography variant="h4" sx={{ 
+                color: '#fff', 
+                fontWeight: 600, 
+                mb: 6, 
+                fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' },
+                "&": {
+                    "@media (max-width: 1400px)": {
+                        fontSize: { xs: '1.3rem', sm: '1.7rem', md: '2.2rem' }
+                    },
+                    "@media (max-width: 1280px)": {
+                        fontSize: { xs: '1.2rem', sm: '1.5rem', md: '2rem' }
+                    }
+                }
+            }}>
                 Why Companies Call Me
             </Typography>
             <Box sx={{
@@ -41,7 +54,21 @@ export default function WhyCallMePage() {
                             <img src={card.image} width={90} height={90}/>
                         </Box>
                         <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', px: 2 }}>
-                            <Typography sx={{ fontSize: '1.2rem', fontWeight: 600 }}>
+                            <Typography sx={{ 
+                                fontSize: { xs: '0.95rem', sm: '1rem', md: '1.05rem' }, 
+                                fontWeight: 600,
+                                lineHeight: 1.3,
+                                "&": {
+                                    "@media (max-width: 1400px)": {
+                                        fontSize: { xs: '0.85rem', sm: '0.9rem', md: '0.95rem' },
+                                        lineHeight: 1.2
+                                    },
+                                    "@media (max-width: 1280px)": {
+                                        fontSize: { xs: '0.8rem', sm: '0.85rem', md: '0.9rem' },
+                                        lineHeight: 1.1
+                                    }
+                                }
+                            }}>
                                 {card.text}
                             </Typography>
                         </Box>

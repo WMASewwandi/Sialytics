@@ -21,7 +21,20 @@ export default function ServicesPage() {
 
     return (
         <Box ref={sectionRef} sx={{ px: { xs: 3, md: 10 }, pt: { xs: 5, md: 10 }, backgroundColor: '#0041c2' }}>
-            <Typography variant="h4" sx={{ color: '#fff', fontWeight: 600, mb: 6, fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' } }}>
+            <Typography variant="h4" sx={{ 
+                color: '#fff', 
+                fontWeight: 600, 
+                mb: 6, 
+                fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' },
+                "&": {
+                    "@media (max-width: 1400px)": {
+                        fontSize: { xs: '1.3rem', sm: '1.7rem', md: '2.2rem' }
+                    },
+                    "@media (max-width: 1280px)": {
+                        fontSize: { xs: '1.2rem', sm: '1.5rem', md: '2rem' }
+                    }
+                }
+            }}>
                 My Services
             </Typography>
             <Box sx={{
@@ -50,7 +63,17 @@ export default function ServicesPage() {
                                 <img src={card.image} width={60} height={60} />
                             </Box>
                             <Box display="flex" alignItems="center" gap={2} p={2}>
-                                <Typography variant="h6" sx={{ fontWeight: '600' }}>{card.name}</Typography>
+                                <Typography variant="h6" sx={{ 
+                                    fontWeight: '600',
+                                    "&": {
+                                        "@media (max-width: 1400px)": {
+                                            fontSize: "1.1rem"
+                                        },
+                                        "@media (max-width: 1280px)": {
+                                            fontSize: "1rem"
+                                        }
+                                    }
+                                }}>{card.name}</Typography>
                             </Box>
                             <Box display="flex" justifyContent="start">
                                 <List>
@@ -71,7 +94,20 @@ export default function ServicesPage() {
                                                 </ListItemIcon>
                                                 <ListItemText
                                                     primary={item}
-                                                    primaryTypographyProps={{ sx: { fontSize: "1.2rem", color: '#191919' } }}
+                                                    primaryTypographyProps={{ 
+                                                        sx: { 
+                                                            fontSize: "1.2rem", 
+                                                            color: '#191919',
+                                                            "&": {
+                                                                "@media (max-width: 1400px)": {
+                                                                    fontSize: "1rem"
+                                                                },
+                                                                "@media (max-width: 1280px)": {
+                                                                    fontSize: "0.9rem"
+                                                                }
+                                                            }
+                                                        } 
+                                                    }}
                                                 />
                                             </ListItemButton>
                                         </ListItem>

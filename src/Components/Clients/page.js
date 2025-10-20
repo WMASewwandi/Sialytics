@@ -21,7 +21,20 @@ export default function ClientsPage() {
 
     return (
         <Box ref={sectionRef} sx={{ px: { xs: 3, md: 10 }, pt: { xs: 5, md: 10 }, minHeight: '90vh' }}>
-            <Typography variant="h4" sx={{ fontWeight: 600, mb: 6, fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem',color: '#191919' } }}>
+            <Typography variant="h4" sx={{ 
+                fontWeight: 600, 
+                mb: 6, 
+                fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' },
+                color: '#191919',
+                "&": {
+                    "@media (max-width: 1400px)": {
+                        fontSize: { xs: '1.3rem', sm: '1.7rem', md: '2.2rem' }
+                    },
+                    "@media (max-width: 1280px)": {
+                        fontSize: { xs: '1.2rem', sm: '1.5rem', md: '2rem' }
+                    }
+                }
+            }}>
                 Who I Work With
             </Typography>
             <Box sx={{
@@ -48,10 +61,34 @@ export default function ClientsPage() {
                         <Box sx={{ flex: 7, p: 2 }}>
                             <Box display="flex" alignItems="center" gap={2} p={2}>
                                 <img src={card.image} width={50} height={50} />
-                                <Typography variant="h5" sx={{ fontWeight: '600' }}>{card.name}</Typography>
+                                <Typography variant="h5" sx={{ 
+                                    fontWeight: '600',
+                                    fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
+                                    lineHeight: 1.3,
+                                    textAlign: 'left',
+                                    "&": {
+                                        "@media (max-width: 1400px)": {
+                                            fontSize: { xs: '0.85rem', sm: '1.05rem', md: '1.25rem' }
+                                        },
+                                        "@media (max-width: 1280px)": {
+                                            fontSize: { xs: '0.8rem', sm: '0.95rem', md: '1.15rem' }
+                                        }
+                                    }
+                                }}>{card.name}</Typography>
                             </Box>
                             <Box display="flex" justifyContent="start" mt={3}>
-                                <Typography sx={{ color: "#6da3fc", fontWeight: '600' }}>Why They Call:</Typography>
+                                <Typography sx={{ 
+                                    color: "#6da3fc", 
+                                    fontWeight: '600',
+                                    "&": {
+                                        "@media (max-width: 1400px)": {
+                                            fontSize: "0.9rem"
+                                        },
+                                        "@media (max-width: 1280px)": {
+                                            fontSize: "0.85rem"
+                                        }
+                                    }
+                                }}>Why They Call:</Typography>
                             </Box>
                             <Box display="flex" justifyContent="start">
                                 <List>
@@ -72,7 +109,22 @@ export default function ClientsPage() {
                                                 </ListItemIcon>
                                                 <ListItemText
                                                     primary={item}
-                                                    primaryTypographyProps={{ sx: { fontSize: "0.9rem", color: '#191919' } }}
+                                                    primaryTypographyProps={{ 
+                                                        sx: { 
+                                                            fontSize: "0.9rem", 
+                                                            color: '#191919',
+                                                            "&": {
+                                                                "@media (max-width: 1400px)": {
+                                                                    fontSize: "0.75rem",
+                                                                    lineHeight: 1.2
+                                                                },
+                                                                "@media (max-width: 1280px)": {
+                                                                    fontSize: "0.7rem",
+                                                                    lineHeight: 1.1
+                                                                }
+                                                            }
+                                                        } 
+                                                    }}
                                                 />
                                             </ListItemButton>
                                         </ListItem>
@@ -91,7 +143,18 @@ export default function ClientsPage() {
                         >
                             <Box display="flex" justifyContent="start" alignItems="center" gap={2} p={2}>
                                 <CheckCircleOutlineIcon sx={{ color: '#538ffd' }} />
-                                <Typography variant="h6" sx={{ fontWeight: '600', color: '#fff' }}>What they gain:</Typography>
+                                <Typography variant="h6" sx={{ 
+                                    fontWeight: '600', 
+                                    color: '#fff',
+                                    "&": {
+                                        "@media (max-width: 1400px)": {
+                                            fontSize: "0.9rem"
+                                        },
+                                        "@media (max-width: 1280px)": {
+                                            fontSize: "0.85rem"
+                                        }
+                                    }
+                                }}>What they gain:</Typography>
                             </Box>
                             <Box display="flex" justifyContent="start" mb={1} p={1}>
                                 <Typography
@@ -100,7 +163,15 @@ export default function ClientsPage() {
                                         color: '#fff',
                                         transform: visible ? "translateY(0)" : "translateY(20px)",
                                         opacity: visible ? 1 : 0,
-                                        transition: "all 0.6s ease 0.5s"
+                                        transition: "all 0.6s ease 0.5s",
+                                        "&": {
+                                            "@media (max-width: 1400px)": {
+                                                fontSize: "0.8rem"
+                                            },
+                                            "@media (max-width: 1280px)": {
+                                                fontSize: "0.75rem"
+                                            }
+                                        }
                                     }}
                                 >
                                     {card.bottom}

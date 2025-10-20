@@ -81,8 +81,35 @@ export default function Home() {
           boxShadow: scrolled ? "0 4px 6px rgba(0,0,0,0.1)" : "none",
         }}
       >
-        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Box sx={{ display: "flex", alignItems: "center", gap: 1, p: 2 }}>
+        <Toolbar sx={{ 
+          display: "flex", 
+          justifyContent: "space-between",
+          minHeight: "auto",
+          overflow: "hidden",
+          "&": {
+            "@media (max-width: 1400px)": {
+              px: 2
+            },
+            "@media (max-width: 1280px)": {
+              px: 1
+            }
+          }
+        }}>
+          <Box sx={{ 
+            display: "flex", 
+            alignItems: "center", 
+            gap: 1, 
+            p: { md: 2, lg: 2 },
+            flexShrink: 0,
+            "&": {
+              "@media (max-width: 1400px)": {
+                px: 1
+              },
+              "@media (max-width: 1280px)": {
+                px: 0.5
+              }
+            }
+          }}>
             <Box
               component="img"
               src={
@@ -91,12 +118,35 @@ export default function Home() {
                   : '/logo/logo-w.png'
               }
               alt="Logo"
-              sx={{ height: 55 }}
+              sx={{ 
+                height: 55,
+                "&": {
+                  "@media (max-width: 1400px)": {
+                    height: 50
+                  },
+                  "@media (max-width: 1280px)": {
+                    height: 45
+                  }
+                }
+              }}
               onClick={() => handleScrollTo("home")}
             />
           </Box>
 
-          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
+          <Box sx={{ 
+            display: { xs: "none", md: "flex" }, 
+            gap: 2,
+            alignItems: "center",
+            flexShrink: 0,
+            "&": {
+              "@media (max-width: 1400px)": {
+                gap: 1.5
+              },
+              "@media (max-width: 1280px)": {
+                gap: 1
+              }
+            }
+          }}>
             {navItems.map((item) => (
               <Button
                 key={item.id}
@@ -104,11 +154,24 @@ export default function Home() {
                 sx={{
                   color: scrolled ? "#114dc7" : "white",
                   textTransform: "none",
-                  fontSize: "16px",
+                  fontSize: { md: "16px", lg: "16px" },
                   fontWeight: 500,
                   background: "transparent",
                   position: "relative",
                   transition: "transform 0.3s ease",
+                  minWidth: "auto",
+                  whiteSpace: "nowrap",
+                  px: { md: 1, lg: 2 },
+                  "&": {
+                    "@media (max-width: 1400px)": {
+                      fontSize: "15px",
+                      px: 0.5
+                    },
+                    "@media (max-width: 1280px)": {
+                      fontSize: "14px",
+                      px: 0.5
+                    }
+                  },
                   "&::after": {
                     content: '""',
                     position: "absolute",
@@ -133,16 +196,31 @@ export default function Home() {
             ))}
           </Box>
 
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ 
+            display: { xs: "none", md: "flex" },
+            flexShrink: 0,
+            ml: 1
+          }}>
             <Button
               variant="contained"
               sx={{
-                backgroundColor: scrolled ? "#114dc7" : "##114dc7",
+                backgroundColor: scrolled ? "#114dc7" : "#114dc7",
                 color: "white",
                 textTransform: "none",
-                fontSize: "16px",
+                fontSize: { md: "16px", lg: "16px" },
                 borderRadius: "25px",
-                px: 3,
+                px: { md: 2, lg: 3 },
+                whiteSpace: "nowrap",
+                "&": {
+                  "@media (max-width: 1400px)": {
+                    fontSize: "15px",
+                    px: 2
+                  },
+                  "@media (max-width: 1280px)": {
+                    fontSize: "14px",
+                    px: 1.5
+                  }
+                },
                 "&:hover": {
                   backgroundColor: scrolled ? "#114dc7" : "#1565c0",
                 },

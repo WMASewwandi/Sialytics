@@ -82,10 +82,21 @@ export default function Footer() {
             }}
           >
             <Box
+            mt={5}
               component="img"
               src='/logo/logo-w.png'
               alt="Logo"
-              sx={{ height: 55 }}
+              sx={{ 
+                height: 55,
+                "&": {
+                  "@media (max-width: 1400px)": {
+                    height: 50
+                  },
+                  "@media (max-width: 1280px)": {
+                    height: 45
+                  }
+                }
+              }}
             />
             <Button
               variant="contained"
