@@ -82,12 +82,12 @@ export default function Footer() {
             }}
           >
             <Box
-            mt={5}
               component="img"
               src='/logo/logo-w.png'
               alt="Logo"
               sx={{ 
                 height: 55,
+                mt: 5,
                 "&": {
                   "@media (max-width: 1400px)": {
                     height: 50
