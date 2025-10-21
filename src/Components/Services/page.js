@@ -60,7 +60,7 @@ export default function ServicesPage() {
                     >
                         <Box sx={{ flex: 1, p: 3 }}>
                             <Box display="flex" justifyContent={{ xs: "center", md: 'start' }} alignItems="center" gap={2} px={2} pt={2}>
-                                <img src={card.image} width={60} height={60} />
+                                <img src={card.image} width={60} height={60} alt={card.name} />
                             </Box>
                             <Box display="flex" alignItems="center" gap={2} p={2}>
                                 <Typography variant="h6" sx={{ 

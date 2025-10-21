@@ -60,7 +60,7 @@ export default function ClientsPage() {
                     >
                         <Box sx={{ flex: 7, p: 2 }}>
                             <Box display="flex" alignItems="center" gap={2} p={2}>
-                                <img src={card.image} width={50} height={50} />
+                                <img src={card.image} width={50} height={50} alt={card.name} />
                                 <Typography variant="h5" sx={{ 
                                     fontWeight: '600',
                                     fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
