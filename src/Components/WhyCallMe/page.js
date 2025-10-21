@@ -51,7 +51,7 @@ export default function WhyCallMePage() {
                         }}
                     >
                         <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                            <img src={card.image} width={90} height={90}/>
+                            <img src={card.image} width={90} height={90} alt="Service icon"/>
                         </Box>
                         <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', px: 2 }}>
                             <Typography sx={{ 
