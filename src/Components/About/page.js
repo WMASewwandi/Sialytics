@@ -58,7 +58,7 @@ export default function AboutPage() {
       >
         <Box
           sx={{
-            flex: { xs: "1", md: "6.5" },
+            flex: { xs: "1", md: "6" },
             display: "flex",
             alignItems: { xs: "flex-start", md: "center" },
             justifyContent: "center",
@@ -69,7 +69,7 @@ export default function AboutPage() {
           }}
         >
           <Box>
-            <Typography variant="h4" sx={{ fontWeight: 600, fontSize: { xs: "1.5rem", md: "2rem",color: '#191919' } }}>
+            <Typography variant="h4" sx={{ fontWeight: 600, fontSize: { xs: "1.5rem", md: "2rem", color: '#191919' } }}>
               25+ Years of <br />Leadership Experience
             </Typography>
             <List sx={{ mt: 2, px: 0 }}>
@@ -84,7 +84,7 @@ export default function AboutPage() {
                     <ListItemIcon>
                       <CheckCircleOutlineIcon sx={{ color: '#538ffd' }} />
                     </ListItemIcon>
-                    <ListItemText primary={item} primaryTypographyProps={{ sx: { fontSize: { xs: "0.9rem", md: "1rem" },color: '#191919' } }} />
+                    <ListItemText primary={item} primaryTypographyProps={{ sx: { fontSize: { xs: "0.9rem", md: "1rem" }, color: '#191919' } }} />
                   </ListItemButton>
                 </ListItem>
               ))}
@@ -94,93 +94,70 @@ export default function AboutPage() {
 
         <Box
           sx={{
-            flex: { xs: "1", md: "3.5" },
+            flex: { xs: "1", md: "4" },
             backgroundColor: "#001f54",
             display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "flex-start",
-            pt: { xs: 5, md: 20 },
-            position: "relative",
+            justifyContent: "center",
+            alignItems: 'center'
           }}
         >
-          <Box
-            sx={{
-              position: { xs: "static", md: "absolute" },
-              top: { md: "80%" },
-              left: { md: "10%" },
-              fontWeight: "bold",
-              textAlign: { xs: "center", md: "left" },
-              mb: { xs: 3, md: 0 }
-            }}
-          >
-            <ListItemText
-              primaryTypographyProps={{
-                sx: {
-                  fontSize: { xs: "1rem", md: "1.5rem" },
-                  color: "#538ffd",
-                  fontWeight: "bold",
-                },
+          <Box>
+            <Box display="flex" justifyContent="center">
+              <Card
+              sx={{
+                width: { md: "300px" },
+                height: { md: "350px" },
+                borderRadius: "20px",
+                zIndex: 2,
+                mt: 2,
+                "&": {
+                  "@media (max-width: 1400px)": {
+                    width: "220px",
+                    height: "250px"
+                  },
+                  "@media (max-width: 1280px)": {
+                    width: "180px",
+                    height: "210px"
+                  }
+                }
               }}
-              secondaryTypographyProps={{
-                sx: {
-                  fontSize: { xs: "0.9rem", md: "1.3rem" },
-                  color: "#538ffd",
-                },
+            >
+              <CardMedia
+                component="img"
+                image='/images/sia.avif'
+                alt="Example Image"
+                sx={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </Card>
+            </Box>
+            <Box
+              sx={{
+                fontWeight: "bold",
+                textAlign: "center",
+                mb: { xs: 3, md: 0 },
+                mt: 2
               }}
-              primary="Sia Zahedi"
-              secondary="Data Analytics Consultant"
-            />
+            >
+              <ListItemText
+                primaryTypographyProps={{
+                  sx: {
+                    fontSize: { xs: "1rem", md: "1.5rem" },
+                    color: "#538ffd",
+                    fontWeight: "bold",
+                  },
+                }}
+                secondaryTypographyProps={{
+                  sx: {
+                    fontSize: { xs: "0.9rem", md: "1.3rem" },
+                    color: "#538ffd",
+                  },
+                }}
+                primary="Sia Zahedi"
+                secondary="Data Analytics Consultant"
+              />
+            </Box>
           </Box>
-
-          <Card
-            sx={{
-              width: { xs: "180px", sm: "220px" },
-              height: { xs: "220px", sm: "270px" },
-              borderRadius: "20px",
-              my: { xs: 3, md: 0 },
-              display: { xs: "block", md: "none" }
-            }}
-          >
-            <CardMedia
-              component="img"
-              image='/images/sia.avif'
-              alt="Example Image"
-              sx={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-          </Card>
         </Box>
-
-        <Card
-          sx={{
-            position: "absolute",
-            top: { md: "50%" },
-            left: { md: "65%" },
-            transform: { md: "translate(-50%, -50%)" },
-            width: { md: "300px" },
-            height: { md: "350px" },
-            borderRadius: "20px",
-            zIndex: 2,
-            display: { xs: "none", md: "block" },
-            "&": {
-              "@media (max-width: 1400px)": {
-                width: "220px",
-                height: "250px"
-              },
-              "@media (max-width: 1280px)": {
-                width: "180px",
-                height: "210px"
-              }
-            }
-          }}
-        >
-          <CardMedia
-            component="img"
-            image='/images/sia.avif'
-            alt="Example Image"
-            sx={{ width: "100%", height: "100%", objectFit: "cover" }}
-          />
-        </Card>
       </Box>
     </>
   );
